@@ -63,21 +63,6 @@ class Handler extends ExceptionHandler
                     'message' => 'Not found.',
                 ], 404);
             }
-
-            // Handle unauthenticated access
-            if ($e instanceof AuthenticationException) {
-                return response()->json([
-                    'message' => 'Unauthenticated. Please log in first.',
-                ], 401);
-            }
-
-            // Handle all other errors (optional)
-            if ($request->expectsJson()) {
-                return response()->json([
-                    'message' => 'Something went wrong. Please try again later.',
-                    'error' => $e->getMessage(), // you can hide this in production
-                ], 500);
-            }
         });
     }
 }
