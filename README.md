@@ -17,7 +17,7 @@
 
 ## Authentication
 - Breeze provides register/login UI.
-- Admin seeded: admin@example.com / password
+- Admin seeded: email: "admin@example.com" | Password: "password"
 
 ## API
 - API endpoints under `/api/v1`
